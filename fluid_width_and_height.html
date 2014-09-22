@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="base.css"/>
+
     <style>
         div {
             width: 50%;
@@ -33,11 +34,38 @@
     </style>
 </head>
 <body>
+    <div>
+        Child 1
+        <div>
+            Child 2
+            <div>
+                Child 3
+            </div>
+        </div>
+    </div>
+
     <div class="circle">
         <div class="innerCircle">
             some data
         </div>
     </div>
+    <div id="asdf" onclick="alert('I am inline ... ')">
+        This is asdf
+    </div>
     <div></div>
+    <script>
+        var div = document.getElementById('asdf');
+
+        div.onclick = function asdf1() {
+            alert('This is asdf1');
+        }; // DOM Level 1
+        div.onclick = function sadf0() {
+            alert('This is asdf2');
+        }; // DOM Level 1
+
+        /*div.addEventListener('click', function asdf2() {}); // DOM Level 2
+         div.addEventListener('click', function asdf3() {}); // DOM Level 2*/
+
+    </script>
 </body>
 </html>

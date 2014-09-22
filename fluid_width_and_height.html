@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>
+    <style>
+        div {
+            width: 50%;
+            background-color: red;
+            height: 0;
+            padding-bottom: 25%;
+            margin: 1em;
+
+        }
+        div.circle {
+            position: relative;
+            border-radius: 50%;
+            width: 25%;
+            background-color: red;
+            height: 0;
+            padding-bottom: 25%;
+        }
+
+        div.innerCircle {
+            position: absolute;
+            background-color: darkred;
+            width: 50%;
+            height: 25%;
+            margin: 25% 25%;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="innerCircle">
+            some data
+        </div>
+    </div>
+    <div></div>
+</body>
+</html>

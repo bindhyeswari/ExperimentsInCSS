@@ -1,0 +1,20 @@
+div
+  position: relative
+  margin: 0 auto
+  width: 40%
+
+span
+  display: block
+  float: left
+  height: 100px
+  width: 1em
+  /*background-color: #eee
+  //border: 1px solid gray*/
+  text-align: center
+
+  position: absolute
+  transform-origin: bottom center
+
+@for $i from 1 through 25
+  .circular#{$i}
+    transform: rotate((360 / 25 * $i) + deg)

@@ -3,19 +3,68 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="base.css"/>
     <style>
-        dd, figure {
+
+        aside {
+            width: 500px;
+            background-color: #eee;
+        }
+
+        dt, dd, figure {
             margin: 0;
+            padding: 0;
         }
 
-        dt, dd {
+        figure {
+            padding-right: 0.5em;
+            padding-top: 0.5em;
+        }
+
+        dt {
+            text-align: right;
+
+        }
+
+        dl {
+            width: 100%;
+            overflow: auto;
+            padding: 0.5em 0 0.75em;
+
+        }
+
+        dt {
+            width: 18%;
+            float: left;
+            clear: both;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        dd {
+
+            padding-top: 1em;
+            width:60%;
+
+            background-color: green;n
+
+        }
+
+        dd.title {
+            width: 82%;
             display: inline-block;
+            float: left;
+            padding-top: 0.5em;
+            background-color: green;
         }
 
-        dd + dt::before {
-            content: 'new line here... ';
+        span.delete {
+            display: inline-block;
+            color: #aaa;
+            float: right;
+            cursor: pointer;
+            padding: 0 0.75em;
         }
-
     </style>
 </head>
 <body>
@@ -23,25 +72,41 @@
     <aside>
 
         <dl>
-            <dt>Aarthi</dt>
-            <dd>
+            <dt>
                 <figure>
-                    <img src="35040e0.jpg" alt=""/>
+                    <img src="35040e0.jpg" alt="Gourav Kochchar"/>
                 </figure>
+            </dt>
+            <dd class="title">
+                Gourav Kochchar
+                <span class="delete">x</span>
             </dd>
-            <dd>
-                Quality Assurance Engineer at somewhere ...
-            </dd>
+            <dd class="below">Marketing specialist at GoLiveLabs</dd>
+            <dd><span>Connect</span></dd>
 
-            <dt>Aarthi</dt>
-            <dd>
+            <dt>
                 <figure>
-                    <img src="35040e0.jpg" alt=""/>
+                    <img src="35040e0.jpg" alt="Gourav Kochchar"/>
                 </figure>
+            </dt>
+            <dd class="title">
+                Gourav Kochchar
+                <span class="delete">x</span>
             </dd>
-            <dd>
-                Quality Assurance Engineer at somewhere ...
+            <dd class="below">Marketing specialist at GoLiveLabs</dd>
+            <dd><span>Connect</span></dd>
+
+            <dt>
+                <figure>
+                    <img src="35040e0.jpg" alt="Gourav Kochchar"/>
+                </figure>
+            </dt>
+            <dd class="title">
+                Gourav Kochchar
+                <span class="delete">x</span>
             </dd>
+            <dd class="below">Marketing specialist at GoLiveLabs</dd>
+            <dd><span>Connect</span></dd>
         </dl>
 
     </aside>

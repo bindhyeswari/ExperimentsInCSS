@@ -1,0 +1,91 @@
+div {
+  position: relative;
+  margin: 0 auto;
+  width: 40%; }
+
+span {
+  display: block;
+  float: left;
+  height: 100px;
+  width: 1em;
+  /*background-color: #eee */
+  text-align: center;
+  position: absolute;
+  transform-origin: bottom center; }
+
+.circular1 {
+  transform: rotate(14.4deg); }
+
+.circular2 {
+  transform: rotate(28.8deg); }
+
+.circular3 {
+  transform: rotate(43.2deg); }
+
+.circular4 {
+  transform: rotate(57.6deg); }
+
+.circular5 {
+  transform: rotate(72deg); }
+
+.circular6 {
+  transform: rotate(86.4deg); }
+
+.circular7 {
+  transform: rotate(100.8deg); }
+
+.circular8 {
+  transform: rotate(115.2deg); }
+
+.circular9 {
+  transform: rotate(129.6deg); }
+
+.circular10 {
+  transform: rotate(144deg); }
+
+.circular11 {
+  transform: rotate(158.4deg); }
+
+.circular12 {
+  transform: rotate(172.8deg); }
+
+.circular13 {
+  transform: rotate(187.2deg); }
+
+.circular14 {
+  transform: rotate(201.6deg); }
+
+.circular15 {
+  transform: rotate(216deg); }
+
+.circular16 {
+  transform: rotate(230.4deg); }
+
+.circular17 {
+  transform: rotate(244.8deg); }
+
+.circular18 {
+  transform: rotate(259.2deg); }
+
+.circular19 {
+  transform: rotate(273.6deg); }
+
+.circular20 {
+  transform: rotate(288deg); }
+
+.circular21 {
+  transform: rotate(302.4deg); }
+
+.circular22 {
+  transform: rotate(316.8deg); }
+
+.circular23 {
+  transform: rotate(331.2deg); }
+
+.circular24 {
+  transform: rotate(345.6deg); }
+
+.circular25 {
+  transform: rotate(360deg); }
+
+/*# sourceMappingURL=letters_in_a_circle.css.map */

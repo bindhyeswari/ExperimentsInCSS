@@ -39,14 +39,14 @@
             clear: both;
             padding-top: 0.5em;
             padding-bottom: 0.5em;
+            max-height: 100px;
         }
 
         dd {
 
             padding-top: 1em;
-            width:60%;
-
-            background-color: green;n
+            width:80%;
+            max-height: 100px;
 
         }
 
@@ -55,7 +55,6 @@
             display: inline-block;
             float: left;
             padding-top: 0.5em;
-            background-color: green;
         }
 
         span.delete {
@@ -65,7 +64,32 @@
             cursor: pointer;
             padding: 0 0.75em;
         }
+
+        .hide {
+            max-height: 0;
+            overflow-y: hidden;
+            transition: max-height 500ms ease;
+        }
+        .fast {
+            transition: max-height 100ms ease;
+        }
     </style>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $('span.delete').click(function () {
+                var index = $(this).parent().index();
+                var children = $('dl').children();
+
+                var indices = [index + 2, index + 1, index, index - 1 ];
+
+                indices.forEach(function (_index) {
+                    children.eq(_index).addClass('hide');
+                });
+
+            });
+        });
+    </script>
 </head>
 <body>
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $('div.info').click(function () {
+                $(this).children('div.data').toggleClass('show-data');
+            });
+        });
+    </script>
+    <style>
+        div.info {
+            background-color: #eee;
+            padding: 1em 2em;
+            margin: 0.25em;
+            cursor: pointer;
+        }
+        div.data {
+            height: auto;
+            color: black;
+            overflow: hidden;
+            transition: max-height 500ms ease;
+
+            display: none;
+            opacity: 0;
+        }
+
+        div.show-data {
+            display: block;
+            opacity: 1;
+            /* use all animation filters -webkit-animation, -ms-animation, -o-animation */
+            -moz-animation: show 1000ms ease;
+            animation: show 1000ms ease;
+        }
+
+        @keyframes show {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        div.show-data-height {
+            max-height: 50px;
+            transition: max-height 1000ms ease;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>
+            Han Ho
+        </h1>
+        <div class="data">
+            Han Ho - UI/UX Design Specialist at GoLiveLabs
+        </div>
+    </div>
+
+    <div class="info">
+        <h1>
+            Han Ho
+        </h1>
+        <div class="data">
+            Han Ho - UI/UX Design Specialist at GoLiveLabs
+        </div>
+    </div>
+
+    <div class="info">
+        <h1>
+            Han Ho
+        </h1>
+        <div class="data">
+            Han Ho - UI/UX Design Specialist at GoLiveLabs
+        </div>
+    </div>
+</body>
+</html>

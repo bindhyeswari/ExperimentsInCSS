@@ -3,23 +3,32 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Letters in a circle</title>
+    <link rel="stylesheet" href="base.css"/>
     <link rel="stylesheet" href="letters_in_a_circle.css"/>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script>
         $(function () {
             // This code will be run after the page loads
-            var $div = $('#statement');
-            var statement = 'Han Ho - UI/UX Specialist';
-            console.log(statement.length);
-            for (var i = 0, len = statement.length; i < len; i++) {
-                var char = statement.charAt(i);
-                $('<span>').addClass('circular' + (i+1)).html(char).appendTo($div);
+
+
+            // create circle for all dates in a month
+            for (var j = 0; j < 31; j++) {
+
+                var $div = $('<div>').addClass('statement').appendTo(document.body);
+
+                $('<div>').addClass('date').appendTo($div).html('Mon ' + ( j + 1 ) + ' Aug');
+
+                for (var i = 0, len = 24; i < len; i++) {
+                    var $span = $('<span>').addClass('circular' + (i+1)).html(i + 1).appendTo($div);
+                    if ( i <= 16 && i >= 8 ) {
+                        $span.addClass('working');
+                    }
+                }
             }
+
         });
     </script>
 </head>
 <body>
-    <div id="statement">
-    </div>
 </body>
 </html>

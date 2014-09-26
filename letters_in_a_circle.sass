@@ -1,7 +1,27 @@
 div
-  position: relative
+
   margin: 0 auto
-  width: 40%
+  height: 200px
+  width: 210px
+
+div.statement
+  font: 300 1em 'helvetica neue'
+  position: relative
+  float: left
+  margin: 1em
+  box-shadow: 0 0 0.5em 0.15em #eee
+  border-radius: 50%
+
+div.date
+  position: absolute
+  left: 50%
+  top: 50%
+  height: 16px
+  font-weight: bold
+  color: #aaa
+  margin-left: -105px
+  margin-top: -8px
+  text-align: center
 
 span
   display: block
@@ -11,10 +31,16 @@ span
   /*background-color: #eee
   //border: 1px solid gray*/
   text-align: center
+  color: #eee
 
   position: absolute
+  left: 50%
+  margin-left: -0.5em
   transform-origin: bottom center
 
-@for $i from 1 through 25
+span.working
+  color: black
+
+@for $i from 1 through 24
   .circular#{$i}
-    transform: rotate((360 / 25 * $i) + deg)
+    transform: rotate((360 / 24 * $i) + deg)

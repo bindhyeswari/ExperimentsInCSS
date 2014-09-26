@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+    </script>
+    <style>
+
+        div.wrapper {
+            text-align: center;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        div.inp {
+            width: 50vh;
+            height: 50vh;
+            background-color: #eee;
+            display: inline-block;
+        }
+
+        div.left {
+            position: relative;
+            background-color: #2a3a48;
+        }
+
+        div.right {
+            position: relative;
+        }
+
+        div.moveInLeft{
+            animation: slideInLeft 500ms ease;
+        }
+
+        div.moveInRight{
+            animation: slideInRight 500ms ease;
+        }
+
+
+        @keyframes slideInLeft {
+            from { left: -50% }
+            to { left: 0 }
+        }
+
+        @keyframes slideInRight {
+            from { right: -50% }
+            to { right: 0 }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inp left">
+
+        </div>
+        <div class="inp right">
+
+        </div>
+    </div>
+    <script>
+        document.body.children[0].addEventListener('click', function (event) {
+            this.children[0].className += ' moveInLeft';
+            this.children[1].className += ' moveInRight';
+        });
+    </script>
+</body>
+</html>
